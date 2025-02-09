@@ -1,0 +1,171 @@
+/* Global Styles */
+body {
+  font-family: 'Arial', sans-serif;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  justify-content: center; /* Center content horizontally */
+  align-items: center; /* Center content vertically */
+  min-height: 100vh; /* Full viewport height */
+  transition: background-color 0.3s, color 0.3s;
+}
+
+.App {
+  text-align: center;
+}
+
+h1 {
+  margin-bottom: 30px;
+  font-size: 2rem;
+}
+
+/* Light Mode Styles */
+body.light-mode {
+  background-color: #f9f9f9;
+  color: #333;
+}
+
+body.light-mode .movie-card {
+  background-color: #fff;
+  border: 1px solid #ddd;
+}
+
+body.light-mode .movie-card:hover {
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+body.light-mode .movie-title {
+  color: #333;
+}
+
+body.light-mode .movie-year,
+body.light-mode .movie-plot,
+body.light-mode .movie-actors {
+  color: #555;
+}
+
+body.light-mode .theme-toggle {
+  background-color: #ff9f00;
+  color: #fff;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 1rem;
+  margin-top: 20px;
+}
+
+body.light-mode .theme-toggle:hover {
+  background-color: #ff7a00;
+}
+
+/* Dark Mode Styles */
+body.dark-mode {
+  background-color: #121212;
+  color: #f1f1f1;
+}
+
+body.dark-mode .movie-card {
+  background-color: #2c2c2c;
+  border: 1px solid #444;
+}
+
+body.dark-mode .movie-card:hover {
+  box-shadow: 0 4px 8px rgba(255, 255, 255, 0.1);
+}
+
+body.dark-mode .movie-title {
+  color: #ff9f00;
+}
+
+body.dark-mode .movie-year,
+body.dark-mode .movie-plot,
+body.dark-mode .movie-actors {
+  color: #bbb;
+}
+
+body.dark-mode .theme-toggle {
+  background-color: #ff9f00;
+  color: #333;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 1rem;
+  margin-top: 20px;
+}
+
+body.dark-mode .theme-toggle:hover {
+  background-color: #ff7a00;
+}
+
+/* Movie List Layout */
+.movie-list {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+  gap: 20px;
+  justify-items: center;
+  align-items: center;
+  padding: 20px;
+  margin: 0 auto;
+  width: 100%;
+}
+
+/* Movie Card Styles */
+.movie-card {
+  width: 100%;
+  max-width: 300px;
+  border-radius: 10px;
+  overflow: hidden;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  text-align: center; /* Center title and text inside the card */
+}
+
+.movie-card img {
+  width: 100%;
+  height: 350px;
+  object-fit: cover;
+}
+
+.movie-details {
+  padding: 15px;
+}
+
+.movie-title {
+  font-size: 1.5rem;
+  font-weight: bold;
+  margin-bottom: 5px;
+}
+
+.movie-year {
+  font-size: 1rem;
+  margin-bottom: 10px;
+}
+
+.movie-plot {
+  font-size: 1rem;
+  margin-bottom: 10px;
+  line-height: 1.5;
+}
+
+.movie-actors {
+  font-size: 0.9rem;
+  font-style: italic;
+}
+
+.movie-actors strong {
+  font-weight: bold;
+}
+
+/* Responsive Layouts */
+@media (max-width: 768px) {
+  .movie-list {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+
+@media (max-width: 480px) {
+  .movie-list {
+    grid-template-columns: 1fr;
+  }
+}
